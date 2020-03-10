@@ -11,10 +11,10 @@ puntosazul = 0
 puntosrojos = 0
 
 ventana = Tk()
-ventana.geometry('780x600+390+160')
-ventana.maxsize(780, 600)
-ventana.minsize(70, 600)
-ventana.title('Piedra Papel o Tijera')
+ventana.geometry('760x600+390+160')
+ventana.maxsize(760, 600)
+ventana.minsize(760, 600)
+ventana.title('Piedra Papel o Tijera    v1.0')
 ventana.iconbitmap(r'Imagenes/Logo.ico')
 ventana.configure(bg = '#3261a8')
 
@@ -29,7 +29,7 @@ def Ganar():
         azulscore.delete(0)
         rojoscore.delete(0)
         azulscore.insert(0,0)
-        rojoscore.insert(0,0)
+        rojoscore.insert(0,0)   
 
     if RojoPuntos == 10:
         showinfo("Ganaste","El equipo Rojo gana, Felicidades!!")
@@ -188,7 +188,7 @@ background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 nombre = askstring('Nombre', '¿Cuál es el nombre del equipo Azul?')
 nombre2 = askstring('Rivel', '¿Cuál es el nombre del equipo Rojo?')
-showinfo('Hola!', 'Bienvedido, {} Diviertete :D'.format(nombre))
+showinfo('Hola!', 'Bienvedidos, Diviertanse :D')
 
 texto1 = Label(ventana,text = "Piedra, Papel o Tijeras",fg="white",bg= '#29b955')
 texto1.grid(row=0,column=1,padx=0)
@@ -203,14 +203,14 @@ vs.grid(row=2,column=1,padx=30)
 vs.config(font=("arial",20,"bold"))
 
 rojo = Label(ventana,text = nombre2,fg="white",bg= '#29b955')
-rojo.place(x=650,y=40)
+rojo.place(x=590, y=40)
 rojo.config(font=("arial",20,"bold"))
 
-azulscore = Listbox (ventana, height=1,width=2, background="#29b955",font=("ARLRDBD",20), fg="white",selectbackground="#29b955",highlightcolor="#29b955")
-azulscore.grid(row=3,column=0,padx=20)
+azulscore = Listbox (ventana, height=1,width=2, background="#29b955",font=("ARLRDBD",20), bd = 0,fg="white",selectbackground="#29b955",highlightcolor="#29b955")
+azulscore.grid(row=3,column=0)
 azulscore.insert(END, 0)
 
-rojoscore = Listbox (ventana, height=1,width=2, background="#29b955",font=("ARLRDBD",20), fg="white",selectbackground="#29b955",highlightcolor="#29b955")
+rojoscore = Listbox (ventana, height=1,width=2, background="#29b955",font=("ARLRDBD",20),bd = 0, fg="white",selectbackground="#29b955",highlightcolor="#29b955")
 rojoscore.grid(row=3,column=2,padx=0)
 rojoscore.insert(END, 0)
 
